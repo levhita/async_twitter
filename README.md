@@ -46,7 +46,7 @@ const client = new Twitter({
 ```
 ## Twitter API
 
-Las APIS son en su forma más burda una URL, como por ejemplo (https://api.twitter.com/1.1/statuses/update.json)[https://api.twitter.com/1.1/statuses/update.json] que se subdivide en partes.
+Las APIS son en su forma más burda una URL, como por ejemplo [https://api.twitter.com/1.1/statuses/update.json](https://api.twitter.com/1.1/statuses/update.json) que se subdivide en partes.
 
 - Protocolo: https://
 - Dominio: api.twitter.com/
@@ -82,5 +82,5 @@ Para comenzar a correr el código, entra a la raíz de tu proyecto y ejecuta
 node app.js
 ```
 
-Entra a [la documentación del paquete Twitter](https://www.npmjs.com/package/twitter) para ver más detalles y darte ideas de que más puedes hacer, así mismo [app.js](app.js) comentado el flujo de acciones que describrimos al inicio del README.md, síguelo en compañia de tu *coach* y no olvides preguntar TODO.
+Entra a [la documentación del paquete Twitter](https://www.npmjs.com/package/twitter) para ver más detalles y darte ideas de que más puedes hacer, así mismo [app.js](app.js) tiene comentado el flujo de acciones que describimos al inicio del README.md, síguelo en compañia de tu *coach* y no olvides preguntar TODO.
 
