@@ -1,0 +1,14 @@
+{
+  "name": "async_twitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha app.spec.js"
+  },
+  "author": "levhita <levhita@levhita.net>",
+  "license": "ISC",
+  "devDependencies": {
+    "twitter": "^1.7.1"
+  }
+}
