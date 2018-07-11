@@ -35,7 +35,7 @@ npm install
 
 - Al fondo encontrarás el botón nombrado Create access token, has click y Twitter te generará un ```access_token_key``` y un ```access_token_secret```, los necesitarás para llenar nuestro archivo de configuración.
 
-Busca tu archivo [config.js](config.js) y reemplaza los valores por los tuyos
+Busca tu archivo [client.js](client.js) y reemplaza los valores por los tuyos:
 ```
 const client = new Twitter({
     consumer_key: '',
@@ -44,4 +44,43 @@ const client = new Twitter({
     access_token_secret: ''
 });
 ```
+## Twitter API
+
+Las APIS son en su forma más burda una URL, como por ejemplo (https://api.twitter.com/1.1/statuses/update.json)[https://api.twitter.com/1.1/statuses/update.json] que se subdivide en partes.
+
+- Protocolo: https://
+- Dominio: api.twitter.com/
+- Versión: 1.1/
+- Endpoint: statuses/update
+- Extensión: .json
+
+Cuando queremos interactuar con ella utilizaremos alguno de los métodos estándard del protocolo HTTP (GET, POST, PUT, PATCH, DELETE, UPDATE).
+
+Los 2 más básicos son:
+
+- **GET:**  Se obtiene data sin provocar cambio alguno en los datos de API.
+- **POST**: Se busca provocar un cambio en los datos del API, como crear un nuevo elemento o actualizar lo datos de alguno existente.
+
+El paquete que descargamos para interactuar con el API de Twitter nos hace la vida más sencilla al manejar todos los valores por defecto para twitter y permitirnos interactuar con el API cambiando solo las cosas que son relevante para nosotros, **el método** (GET/POST) y el **EndPoint**, así mismo utiliza elegantes promesas para manejar el flujo del programa y los errores.
+
+```
+client.post('statuses/update', {
+    status: 'Este es un tweet de prueba',
+})
+.then( (tweet) => {
+    console.log(tweet);
+})
+.catch( (error) => {
+    console.log(error);
+});
+```
+
+## Ejecución
+
+Para comenzar a correr el código, entra a la raíz de tu proyecto y ejecuta
+```
+node app.js
+```
+
+Entra a [la documentación del paquete Twitter](https://www.npmjs.com/package/twitter) para ver más detalles y darte ideas de que más puedes hacer, así mismo [app.js](app.js) comentado el flujo de acciones que describrimos al inicio del README.md, síguelo en compañia de tu *coach* y no olvides preguntar TODO.
 
