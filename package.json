@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha app.spec.js"
+    "test": ""
   },
   "author": "levhita <levhita@levhita.net>",
   "license": "ISC",
